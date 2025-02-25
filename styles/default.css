@@ -38,6 +38,8 @@ main {
     box-sizing: border-box;
     width: 100%;
     border: solid #7A2048 5px;
+    border-bottom: solid #7A2048 1px;
+    border-top: solid #7A2048 1px;
     padding: 15px;
     margin: auto;
     font-size: 16px; 
