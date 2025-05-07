@@ -7,14 +7,7 @@ body {
     opacity: 0.8;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
 }
-}
-    
-body {
-background-color: #CBDCEB;
-opacity: 0.8;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
-}
-    
+ 
 header {
     background-color: #CBDCEB;
     color: #133E87;
