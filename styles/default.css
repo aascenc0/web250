@@ -1,11 +1,17 @@
-body {
-    background-color: #CBDCEB;
+#body {
+ #   background-color: #CBDCEB;
     color: #133E87;
     font-family: Arial, sans-serif;
     position: relative;
     flex-grow: 1;
+#}
+    
+body {
+background-color: #e5e5f7;
+opacity: 0.8;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
 }
-
+    
 header {
     background-color: #CBDCEB;
     color: #133E87;
