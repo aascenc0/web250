@@ -56,9 +56,6 @@ document.getElementById("generate-button").addEventListener("click", function ()
     document.getElementById("greeting").textContent = 'Welcome, ' + firstName + ' ' + middleInitial + ' ' + lastName + '!';
 });
 
-const lastName = document.getElementById("last-name").value.trim();
-document.getElementById("greeting").textContent = 'Welcome, ' + firstName + ' ' + middleInitial + lastName + '!';
-
 // for reset button
 document.getElementById("reset-button").addEventListener("click", function () {
     // clear all input fields
