@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Ascencio's Arctic Wolf | WEB250 | FizzBuzz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+    <h2>FizzBuzz</h2>
+    <h3 id="greeting">Welcome to FizzBuzz</h3>
+    <section id="names">
+        <h3>Enter Your Information</h3>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name"  placeholder="Enter your First Name" required>
+
+        <label for="middle-name">Middle Name:</label>
+        <input type="text" id="middle-name" placeholder="Enter your Middle Name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name"  placeholder="Enter your Last Name" required>
+    </section>
+
+    <section id="setup">
+        <h3>Setup Divisors and Words</h3>
+        <section>
+        <label for="divisor-1">Divisor 1:</label>
+        <input type="number" id="divisor-1" value="3">
+        <label for="word-1">Word 1:</label>
+        <input type="text" id="word-1" value="Arctic">
+        </section>
+        <section>
+        <label for="divisor-2">Divisor 2:</label>
+        <input type="number" id="divisor-2" value="5">
+        <label for="word-2">Word 2:</label>
+        <input type="text" id="word-2" value="Wolf">
+        </section>
+        <section>
+        <label for="divisor-3">Divisor 3:</label>
+        <input type="number" id="divisor-3" value="7">
+        <label for="word-3">Word 3:</label>
+        <input type="text" id="word-3" value="Runs">
+        </section>
+    </section>
+    <section id="default">
+        <label for="default-word">Default Word:</label>
+        <input type="text" id="default-word" value="Snow" required>
+    </section>
+    <section id="total-list">
+        <label for="total">Total Count (Default list: 111):</label>
+        <input type="number" id="total" value="111" required>
+    </section>
+
+    <button id="generate-button">Generate</button>
+    <button id="reset-button">Reset</button>
+
+    <div id="result"></div>
+    <div class="output" id="output"></div>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/fizzbuzz4.js"></script>
+    <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
