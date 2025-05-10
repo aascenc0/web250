@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Business Card - Open Innovations Ltd.</title>
+<script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa; 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  /* Card styles with Flexbox layout and smooth movement */
+  .card {
+    width: 5in; /* approximately 5 inches wide */
+    height: 3in; /* approximately 3 inches high */
+    max-width: 600px; /* fallback for smaller screens */
+    max-height: 360px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* hide overflow for background image */
+    background-image: url('images/alien_head.png');
+    background-repeat: no-repeat;
+    background-position: center 30px;
+    background-size: 50%;
+    margin-bottom: 20px; /* space for button below */
+    transition: transform 0.2s ease; /* smooth movement */
+    cursor: pointer;
+  }
+
+
+  /* Upper content (name, company, separator, contact) */
+  .upper-content {
+    flex: 1; /* takes up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* Person's Name */
+  .person-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  /* Company Name */
+  .name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+  }
+
+  /* Separator line */
+  .separator {
+    height: 1px;
+    background-color: #7A2048;
+    margin: 8px 0;
+  }
+
+  /* Contact info styles */
+  .contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 0.95em;
+    color: #34495e;
+    padding: 0 10px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Bottom tagline container */
+  .bottom-tagline {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #7A2048;
+  }
+
+  /* Style for the return button */
+  #returnToHome {
+    margin-top: auto; /* push to bottom if needed */
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #7A2048;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #returnToHome:hover {
+    background-color: #a8325f;
+  }
+
+  /* Button container styling */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card" id="businessCard">
+  <div class="upper-content">
+    <div class="person-name" id="personName">Alexander Ascencio</div>
+    <div class="name" id="companyName">Open Innovations Ltd.</div>
+    <div class="separator"></div>
+    <div class="contact-info">
+      <div class="contact-item" id="phone"><span class="icon">📞</span> <span>+1 (555) 123-4567</span></div>
+      <div class="contact-item" id="email"><span class="icon">✉️</span> <span>info@slol.com</span></div>
+      <div class="contact-item" id="website"><span class="icon">🌐</span> <span>www.open.com</span></div>
+      <div class="contact-item" id="address"><span class="icon">📍</span> <span>123 Innovation Drive, Tech City, CA</span></div>
+    </div>
+  </div>
+  <div class="bottom-tagline" id="tagline">Innovative Web Solutions for Your Business</div>
+</div>
+
+<div class="button-container">
+  <button id="returnToHome">Return to Homepage</button>
+</div>
+
+<script>
+  const homepageURL = "https://aascenc0.github.io/web250/";
+
+  document.getElementById("returnToHome").addEventListener("click", function() {
+    window.location.href = homepageURL;
+  });
+
+  const card = document.getElementById('businessCard');
+
+  // Add mousemove event to move the card slightly based on cursor position
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left; // mouse X within card
+    const y = e.clientY - rect.top;  // mouse Y within card
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const offsetX = ((x - centerX) / centerX); // range from -1 to 1
+    const offsetY = ((y - centerY) / centerY); // range from -1 to 1
+
+    const maxTranslate = 10; // pixels for side-to-side movement
+
+    const translateX = offsetX * maxTranslate;
+    const translateY = offsetY * maxTranslate;
+
+    // Apply transform for subtle movement
+    card.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+  });
+
+  // Reset position when mouse leaves the card
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = `translateX(0px) translateY(0px)`;
+  });
+</script>
+
+</body>
+</html>
