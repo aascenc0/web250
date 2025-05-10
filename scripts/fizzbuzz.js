@@ -49,18 +49,12 @@ document.getElementById("generate-button").addEventListener("click", function ()
     
     resultContainer.innerHTML = output; // display the result
     
-    // update greeting
-const firstName = document.getElementById("first-name").value.trim();
-const middleNameInput = document.getElementById("middle-name").value.trim();
-let middleInitial = '';
-
-if (middleNameInput) {
-    middleInitial = middleNameInput[0].toUpperCase(); // Get first letter and convert to uppercase if desired
-    if (!middleInitial.endsWith('.')) {
-        middleInitial += '.';
-    }
-    middleInitial += ' '; // Add a space after the initial
-} // If no middle name, middleInitial remains empty
+// update greeting
+    const firstName = document.getElementById("first-name").value.trim();
+    const middleInitial = document.getElementById("middle-name").value.trim()[0] || '';
+    const lastName = document.getElementById("last-name").value.trim();
+    document.getElementById("greeting").textContent = 'Welcome, ' + firstName + ' ' + middleInitial + ' ' + lastName + '!';
+});
 
 const lastName = document.getElementById("last-name").value.trim();
 document.getElementById("greeting").textContent = 'Welcome, ' + firstName + ' ' + middleInitial + lastName + '!';
