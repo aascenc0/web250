@@ -50,10 +50,14 @@ document.getElementById("generate-button").addEventListener("click", function ()
     resultContainer.innerHTML = output; // display the result
     
     // update greeting
-    const firstName = document.getElementById("first-name").value.trim();
-    const middleInitial = document.getElementById("middle-name").value.trim()[0] || '.';
-    const lastName = document.getElementById("last-name").value.trim();
-    document.getElementById("greeting").textContent = 'Welcome, ' + firstName + ' ' + middleInitial.endswith(".") + ' ' + lastName + '!';
+const firstName = document.getElementById("first-name").value.trim();
+let middleInitial = document.getElementById("middle-name").value.trim()[0] || '';
+// Add a period if middleInitial is not empty and doesn't already end with a period
+if (middleInitial && !middleInitial.endsWith('.')) {
+    middleInitial += '.';
+}
+const lastName = document.getElementById("last-name").value.trim();
+document.getElementById("greeting").textContent = 'Welcome, ' + firstName + ' ' + middleInitial + ' ' + lastName + '!';
 });
 
 // for reset button
