@@ -119,6 +119,50 @@ nav li a:hover {
     background-color: #CBDCEB;
 }
 
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+#setup, #names, #default, #total-list {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+#reset-button {
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: solid;
+    border-radius: 1px;
+    border-color: #133E87;
+    background-color: #CBDCEB;
+    color: #133E87;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+button:hover {
+    background-color: #608BC1;
+}
+
+#output {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
 footer {
     background-color: #CBDCEB;
     color: #133E87;
