@@ -53,9 +53,6 @@ document.getElementById("generate-button").addEventListener("click", function ()
     const firstName = document.getElementById("first-name").value.trim();
     const middleInitial = document.getElementById("middle-name").value.trim()[0] || '';
     const lastName = document.getElementById("last-name").value.trim();
-    if (middleInitial && !middleInitial.endsWith('.')) {
-    middleInitial += '.';
-}
     document.getElementById("greeting").textContent = 'Welcome, ' + firstName + ' ' + middleInitial + ' ' + lastName + '!';
 });
 
