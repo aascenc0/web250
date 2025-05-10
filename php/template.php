@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander Ascencio's Arctic Wolf | WEB250 | Template Page | CHANGE FOR THIS PAGE</title>
+    <link rel="stylesheet" href="styles/default.css" />
+    <script src="https://lint.page/kit/6664c1.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <header>
+        <div>
+            <h1>Alexander Ascencio's Arctic Wolf | WEB250</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="introduction.php">Introduction</a></li>
+                <li><a href="contract.php">Contract</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Template Page - CHANGE TO PAGE NAME</h2>
+        <p>This is a Template page. I've built it so that I can easily copy it and then just change the contents to match the page I'm working on.</p>
+        <p>This is a 2nd sample paragraph for the template page. I'll change it or delete it depending on the assignment I create from it.</p>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://github.com/aascenc0" target="_blank">GitHub</a></li>
+                <li><a href="https://aascenc0.github.io/" target="_blank">GitHub.io</a></li>
+                <li><a href="https://aascenc0.github.io/web250/" target="_blank">WEB250.io</a></li>
+                <li><a href="https://www.freecodecamp.org/aascenc0" target="_blank">freeCodeCamp</a></li>
+                <li><a href="https://www.codecademy.com/profiles/aascenc0" target="_blank">Codecademy</a></li>
+                <li><a href="https://jsfiddle.net/u/aascenc0/fiddles/" target="_blank">JSFiddle</a></li>
+                <li><a href="https://www.linkedin.com/in/alexander-ascencio-a24412325/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+        <p>Page built by Alexander Ascencio. | Certified in <a href="https://www.freecodecamp.org/certification/aascenc0/responsive-web-design" target="_blank">Responsive Web Design</a>.</p>
+    </footer>
+</body>
+</html>
