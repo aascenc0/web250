@@ -99,30 +99,6 @@
     color: #7A2048;
   }
 
-  /* Style for the return button */
-  #returnToHome {
-    margin-top: auto; /* push to bottom if needed */
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #7A2048;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  #returnToHome:hover {
-    background-color: #a8325f;
-  }
-
-  /* Button container styling */
-  .button-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 10px;
-  }
 </style>
 </head>
 <body>
@@ -142,16 +118,7 @@
   <div class="bottom-tagline" id="tagline">Innovative Web Solutions for Your Business</div>
 </div>
 
-<div class="button-container">
-  <button id="returnToHome">Return to Homepage</button>
-</div>
-
 <script>
-  const homepageURL = "https://aascenc0.github.io/web250/";
-
-  document.getElementById("returnToHome").addEventListener("click", function() {
-    window.location.href = homepageURL;
-  });
 
   const card = document.getElementById('businessCard');
 
