@@ -22,8 +22,8 @@ function validateFields() {
 document.getElementById("generate-button").addEventListener("click", function () {
     if (!validateFields()) return; // Validate fields before proceeding
 
-    // get the maximum number from the total field or default to 125
-    const maxNumber = parseInt(document.getElementById("total").value) || 125;
+    // get the maximum number from the total field or default to 999
+    const maxNumber = parseInt(document.getElementById("total").value) || 999;
     const resultContainer = document.getElementById("result");
     resultContainer.innerHTML = ""; // clear previous results
 
