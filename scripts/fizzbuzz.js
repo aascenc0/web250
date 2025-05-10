@@ -71,4 +71,4 @@ document.getElementById("reset-button").addEventListener("click", function () {
     document.querySelectorAll('input[type="text"], input[type="number"]').forEach((input) => input.value = '');
     document.getElementById("result").innerHTML = ""; // Clear the results
     // document.getElementById("greeting").textContent = ""; // Clear the greeting
-});
+};
